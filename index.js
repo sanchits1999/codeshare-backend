@@ -6,9 +6,9 @@ const express = require("express")
 const cors = require("cors")
 const app = express()
 
-const port = 3001 || process.env.PORT
+const port = process.env.PORT || 3001
 
-app.use(cors({ credentials: true, origin: 'http://localhost:3000' }))
+app.use(cors())
 app.use(express.json())
 app.use(roomroute)
 
